@@ -1,0 +1,18 @@
+name: flow
+on:
+  workflow_dispatch:
+    inputs:
+      who:
+        reason: who are you?
+        required: false
+        default: Anonymous user yo
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "User ${{ github.events.inputs.who }}"
+          echo: "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          ls -al GITHUB_WORKSPACE
+          ls -al $HOME
+  
