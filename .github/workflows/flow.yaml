@@ -13,6 +13,6 @@ jobs:
       - run: |
           echo "User ${{ github.events.inputs.who }}"
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
-          ls -al GITHUB_WORKSPACE
+          ls -al $GITHUB_WORKSPACE
           ls -al $HOME
   
