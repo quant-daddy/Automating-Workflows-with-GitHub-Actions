@@ -13,6 +13,7 @@ jobs:
       - run: |
           echo "User ${{ github.event.inputs.who }}"
           echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "sshh: ${{ secrets.GITHUB_TOKEN }}"
           ls -al $GITHUB_WORKSPACE
           ls -al $HOME
   
