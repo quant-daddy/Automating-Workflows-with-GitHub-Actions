@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       who:
-        reason: who are you?
+        description: who are you?
         required: false
         default: Anonymous user yo
 jobs:
@@ -12,7 +12,7 @@ jobs:
     steps:
       - run: |
           echo "User ${{ github.events.inputs.who }}"
-          echo: "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
           ls -al GITHUB_WORKSPACE
           ls -al $HOME
   
